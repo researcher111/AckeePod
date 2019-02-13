@@ -17,7 +17,6 @@ componentDidMount(){
 async getData(){
     let response = await fetch("https://www.cs.virginia.edu/~dgg6b/Mobile/Featured/featured.json")
     let parsedResponse = await response.json()
-    console.log(parsedResponse)
     this.setState({
         featured : parsedResponse
     })
@@ -44,10 +43,10 @@ const styles = StyleSheet.create(
     {
         container:{
             height:158,
+            margin: 10,
         },
         featuredImage:{
             height: 148,
-            margin:10,
             flexDirection: 'column',
             justifyContent: 'flex-end',
         },
