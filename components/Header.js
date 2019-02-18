@@ -2,6 +2,10 @@ import * as React from 'react'
 import {View, Text, StyleSheet, Image} from 'react-native'
 
 export default class Header extends React.Component{
+    constructor(props){
+        super(props)
+    }
+
     render(){
         return(
             <View style={styles.container}>

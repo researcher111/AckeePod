@@ -27,7 +27,9 @@ render(){
         return(<View/>)
     }
     return(
+        
         <View style={styles.container}>
+
         <ImageBackground style={styles.featuredImage}
         source={{uri: this.state.featured.image}}>
             <Text style={styles.title}> {this.state.featured.title}
