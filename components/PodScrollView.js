@@ -79,7 +79,6 @@ const styles = StyleSheet.create(
         },
 
         title: {
-            fontFamily: "Helvetica",
             fontSize: 24,
             color: "#FFFFFF",
             letterSpacing: 0.35,
@@ -91,7 +90,7 @@ const styles = StyleSheet.create(
         },
 
         ScollablePodCasts:{
-            flex:0
+            
             },
 
         rowContainer:{
@@ -106,7 +105,6 @@ const styles = StyleSheet.create(
         },
 
         podCastTile:{
-            fontFamily: "Helvetica",
             fontSize: 14,
             color: "#FFFFFF",
             letterSpacing: -0.15,

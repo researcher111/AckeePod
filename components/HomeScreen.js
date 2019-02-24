@@ -14,7 +14,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
         <View style={styles.container}>
-        <Header/>
+        <Header navigation={this.props.navigation}/>
         <TouchableOpacity
           onPress={()=>{this.props.navigation.navigate('Player', 
             {pod: "1"}
@@ -27,9 +27,6 @@ export default class HomeScreen extends React.Component {
     )
   }
 }
-
-
-
 
 const styles = StyleSheet.create(
     {

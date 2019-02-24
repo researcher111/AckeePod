@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {View, Text, StyleSheet, Image} from 'react-native'
+import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native'
 
 export default class Header extends React.Component{
     constructor(props){
@@ -9,6 +9,9 @@ export default class Header extends React.Component{
     render(){
         return(
             <View style={styles.container}>
+           <TouchableOpacity onPress={()=>{this.props.navigation.toggleDrawer()}}>
+                <Image style={styles.menuIcon} source={require('../assets/menuIcon.png')}/>
+            </TouchableOpacity>
                 <Text style={styles.title}> Featured</Text>
                 <Image style={styles.searchIcon} source={require('../assets/searchIcon.png')} />
             </View>
@@ -17,12 +20,15 @@ export default class Header extends React.Component{
 
 }
 
+
+
 const styles = StyleSheet.create(
     {
         container:{
             height: 48,
             flexDirection: 'row',
             justifyContent: 'space-between',
+            alignItems: 'center'
 
         },
 
@@ -31,10 +37,13 @@ const styles = StyleSheet.create(
             textAlign: 'left',
             fontSize: 40,
             color: "#ffffff",
-            fontFamily: 'Helvetica-Bold'
         },
         searchIcon:{
             margin:10
+        },
+        menuIcon:{
+            width: 30,
+            height: 30,
         }
         
     }
