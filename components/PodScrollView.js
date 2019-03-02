@@ -67,6 +67,7 @@ const styles = StyleSheet.create(
     {
         conatiner:{
             flex:1,
+            flexWrap: 'wrap',
             flexDirection:'column',
             justifyContent: 'space-between',
             padding:20
@@ -91,17 +92,19 @@ const styles = StyleSheet.create(
 
         ScollablePodCasts:{
             
-            },
+        },
 
         rowContainer:{
             flexDirection:'row', 
-            justifyContent: 'space-between',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
             padding: 15
         },
 
         podCastContainer:{
             flexDirection:'column', 
-            justifyContent: 'space-evenly',
+            justifyContent: 'space-between',
+            alignItems: 'center'
         },
 
         podCastTile:{
@@ -109,12 +112,11 @@ const styles = StyleSheet.create(
             color: "#FFFFFF",
             letterSpacing: -0.15,
             textAlign: "left",
-            paddingTop: 10
         }, 
 
         podImages:{
-            height: 128, 
-            width: 128,
+            height: 125, 
+            width: 125,
         }     
 
     }

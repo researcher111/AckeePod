@@ -22,7 +22,7 @@ export default class HomeScreen extends React.Component {
         >
            <Featured/>
         </TouchableOpacity>
-        <PodScrollView/>
+        <PodScrollView />
       </View>
     )
   }
