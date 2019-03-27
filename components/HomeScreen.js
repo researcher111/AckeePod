@@ -4,7 +4,9 @@ import { Constants, Notifications } from 'expo'
 import Featured from './Featured'
 import Header from './Header'
 import PodScrollView from './PodScrollView'
+import { Analytics, PageHit } from 'expo-analytics';
 
+const analytics = new Analytics('UA-32594877-1');
 
 export default class HomeScreen extends React.Component {
   constructor(props){
@@ -12,7 +14,10 @@ export default class HomeScreen extends React.Component {
   }
 
     componentDidMount(){
-    this._notificationSubscription = Notifications.addListener(this._handleNotification);
+      this._notificationSubscription = Notifications.addListener(this._handleNotification);
+        analytics.hit(new PageHit('Home'))
+      .then(() => console.log("success"))
+      .catch(e => console.log(e.message));
     }
 
     _handleNotification = (notification) => {
