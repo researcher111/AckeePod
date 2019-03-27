@@ -104,7 +104,7 @@ const styles = StyleSheet.create(
         podCastContainer:{
             flexDirection:'column', 
             justifyContent: 'space-between',
-            alignItems: 'center'
+            alignItems: 'center',
         },
 
         podCastTile:{

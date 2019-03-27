@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, StyleSheet, TouchableOpacity} from 'react-native'
-import { Constants } from 'expo'
+import {View, StyleSheet, TouchableOpacity, Alert} from 'react-native'
+import { Constants, Notifications } from 'expo'
 import Featured from './Featured'
 import Header from './Header'
 import PodScrollView from './PodScrollView'
@@ -10,6 +10,20 @@ export default class HomeScreen extends React.Component {
   constructor(props){
     super(props)
   }
+
+    componentDidMount(){
+    this._notificationSubscription = Notifications.addListener(this._handleNotification);
+    }
+
+    _handleNotification = (notification) => {
+      this.setState({notification: notification})
+      console.log("Got Notification")
+
+      Alert.alert(
+        'Alert Title',
+        'My Alert Msg',
+      )
+    };
 
   render() {
     return (

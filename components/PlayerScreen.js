@@ -19,7 +19,7 @@ export default class PlayerScreen extends React.Component{
 
     componentDidMount(){
         const soundObject = new Audio.Sound()
-        soundObject.loadAsync(require("../assets/tunes3.mp3")).then( ()=>{
+        soundObject.loadAsync(require("../assets/tunes2.mp3")).then( ()=>{
             this.setState({
                 soundLoaded: true,
                 soundObject: soundObject,
